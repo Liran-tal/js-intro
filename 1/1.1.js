@@ -12,7 +12,6 @@ console.log("bulie is a " + typeof(bulie) + ", and its value is: " + bulie);
 console.log("nal is a " + typeof(nal) + ", and its value is: " + nal);
 console.log("asdfasd is a " + typeof(asdfasd) + ", and its value is: " + asdfasd);
 console.log("sym1 is a " + typeof(sym1));
-console.log("sym1 is a aaaaaaaaa");
 
     
     
