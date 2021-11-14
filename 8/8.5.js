@@ -20,5 +20,3 @@ const obj = {1:'a', 2:'b', 3:'c', 4:'d'};
 
 console.log("obj before reverseEntries()",  obj);
 console.log("obj after reverseEntries()",  reverseEntries(obj));
-
-
