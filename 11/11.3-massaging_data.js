@@ -76,3 +76,31 @@ function bornBefore1990(data) {
 
 
 //.3
+//iterate the array
+//combine meats and fish to one array
+//create histogram for each element
+function arrayOfFoods(data) {
+	const food = [];
+	for (const obj of data) {
+		food.push(obj.favoriteFoods.meats);
+		food.push(obj.favoriteFoods.fish);
+	}
+	return food.flat();
+}
+
+// console.log('arrayOfFoods(data): ', arrayOfFoods(data));
+
+function foodHistogram(data) {
+	const food_array = arrayOfFoods(data);
+	const histogram = {};
+	for (const elm of food_array) {
+		if ([elm] in histogram) {
+			++ histogram[elm];
+		} else{
+			histogram[elm] = 1;
+		}
+	}
+	return histogram;
+}
+
+console.log('foodHistogram(data): ', foodHistogram(data));
