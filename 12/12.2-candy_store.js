@@ -18,9 +18,9 @@ const candyStore = {
 
 
 //.1
-function getCandy(candyStore, id){
+function getCandy(candyStore, id) {
 	const result = candyStore.candies.filter((elm) => {
-		if (elm.id === id){
+		if (elm.id === id) {
 			return elm
 		}
 	})
@@ -32,14 +32,33 @@ function getCandy(candyStore, id){
 
 
 //.2
-function getPrice(candyStore, id){
+function getPrice(candyStore, id) {
 	const result = candyStore.candies.filter((elm) => {
-		if (elm.id === id){
+		if (elm.id === id) {
 			return elm
 		}
 	})
 	return (result[0] ? result[0].price : undefined);
 }
 
-console.log('getPrice(candyStore, "5hd7y"); ', getPrice(candyStore, "5hd7y"));
-console.log('getPrice(candyStore, "55555"); ', getPrice(candyStore, "55555"));
+// console.log('getPrice(candyStore, "5hd7y"); ', getPrice(candyStore, "5hd7y"));
+// console.log('getPrice(candyStore, "55555"); ', getPrice(candyStore, "55555"));
+
+
+//.3
+function addCandy(candyStore, id, name, price) {
+	const new_item = {
+		'name': name,
+		'id': id,
+		'price': price,
+		'amount': 1
+	};
+	candyStore.candies.push(new_item);
+	return;
+}
+
+// addCandy(candyStore, 55555, "creambo", 1);
+// console.log('addCandy(candyStore, 55555, "creambo", 1)', candyStore);
+
+
+//.4
