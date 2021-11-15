@@ -87,6 +87,10 @@ school.assignTeachersSubject = function (teachers_id, new_subject) {
 	}
 	return;
 }
-school.assignTeachersSubject(1, "math");
-school.assignTeachersSubject(1, "physics");
-console.log(school.teachers);
+// school.assignTeachersSubject(1, "math");
+// school.assignTeachersSubject(1, "physics");
+// console.log(school.teachers);
+
+school.messageToExerciseWriter = function () {
+	console.log("This is pointless!!!!");
+}
