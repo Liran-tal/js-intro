@@ -33,11 +33,7 @@ function getCandy(candyStore, id) {
 
 //.2
 function getPrice(candyStore, id) {
-	const result = candyStore.candies.filter((elm) => {
-		if (elm.id === id) {
-			return elm
-		}
-	})
+	const result = getCandy(candyStore, id);
 	return (result[0] ? result[0].price : undefined);
 }
 
@@ -62,3 +58,13 @@ function addCandy(candyStore, id, name, price) {
 
 
 //.4
+function buy(candyStore, id) {
+	const result = getCandy(candyStore, id);
+	// console.log(getCandy(candyStore, id));
+	candyStore.cashRegister += result.price;
+	result.amount -= 1;		
+	return;
+}
+
+buy(candyStore, "5hd7y");
+console.log('addCandy(candyStore, "5hd7y")', candyStore);
