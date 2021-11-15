@@ -54,3 +54,39 @@ school.findPerson = function (type, id) {
 
 
 //.2
+school.findTeacherBySubject = function (subject) {
+	const teacher = school.teachers.filter((elm) => {
+		if (elm.subjects.includes(subject) && elm.capacityLeft > 0) {
+			return elm
+		}
+	})
+	return teacher[0];
+}
+
+school.assignStudent = function (student_id, subject) {
+	//Find available teacher for subject
+	const teacher = school.findTeacherBySubject(subject);
+	if (teacher.length === 0){
+		console.log('Sorry, no available teachers left');
+		return;
+	}
+	//Assign student, by id, to teacher
+	teacher.students.push(school.findPerson("students", student_id));
+	-- teacher.capacityLeft;
+	return;
+}
+// school.assignStudent(10, 'ethics');
+// console.log(school.teachers);
+
+
+//.3
+school.assignTeachersSubject = function (teachers_id, new_subject) {
+	const teacher = school.findPerson("teachers", teachers_id);
+	if (!teacher.subjects.includes(new_subject)) {
+		teacher.subjects.push(new_subject);
+	}
+	return;
+}
+school.assignTeachersSubject(1, "math");
+school.assignTeachersSubject(1, "physics");
+console.log(school.teachers);
