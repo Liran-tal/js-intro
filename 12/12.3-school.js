@@ -41,12 +41,12 @@ const school = {
 
 school.findPerson = function (type, id) {
 	// console.log(this[type]);
-	const result = school[type].filter((elm) => {
+	const result = school[type].find((elm) => {
 		if (elm.id === id) {
 			return elm
 		}
 	})
-	return result[0];
+	return result;
 }
 
 // console.log('school.findPerson(teacher, 1): ', school.findPerson('teachers', 1));

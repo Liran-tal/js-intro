@@ -19,7 +19,7 @@ const candyStore = {
 
 //.1
 function getCandy(candyStore, id) {
-	const result = candyStore.candies.filter((elm) => {
+	const result = candyStore.candies.find((elm) => {
 		if (elm.id === id) {
 			return elm
 		}
