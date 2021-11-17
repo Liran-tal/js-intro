@@ -12,13 +12,21 @@ const max = numbers.reduce((max_val, num) => {
 //.2
 
 function sum_of_even (array){
-	let sum = numbers.reduce((sum, num) => {
+	let sum = array.reduce((sum, num) => {
 		return (num % 2 === 0) ? sum += num : sum;
-	});
+	}, 0);
 	
-	return numbers[0] % 2 !== 0 ? sum - numbers[0] : sum; 
+	return sum
 }
-console.log('sum value of even numbers in numbers is: ', sum_of_even(numbers));
+// console.log('sum value of even numbers in numbers is: ', sum_of_even(numbers));
 
 
 //.3
+function calcAvg(array) {
+	let avg = array.reduce((avg, num) => {
+		return avg + num;
+	}, 0);
+	return avg / array.length
+}
+
+console.log('Average value of numbers in numbers is: ', calcAvg([1, 2, 3, 4]));
