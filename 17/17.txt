@@ -1,0 +1,13 @@
+*** Block 1 ***
+
+b last assignmet is 5. The functions doesn't use their parameters so the arguments metters none. Since b was declered with var, it's scope is global and reaches insde otherFunction so firstResult will be equal to 5. result will cause a fault because of the passing of arguments to firstResult which is not a function.
+
+
+*** Block 2 ***
+
+var a same as before. function a() {} is after return so it is ignored.
+
+
+*** Block 3 ***
+
+setTimeOut() removes its content from the flow of the program and so the loop run its course and only than is the console.log provoked where i is already set to 3. 
