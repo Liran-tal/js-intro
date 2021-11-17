@@ -32,3 +32,5 @@ console.log(getSum([1, 2, 3], [5, 66, 23]));
 //VScode built-in js debbuger.
 
 //.3
+//First bug was TypeError: undefined, meaning that arr1 had a problem with been defined as an array. The problem was not in the function decleration, but rather at the call to the function where a comma was missing between the two arrays, making them a single, undefined, argument.
+//Secound bug was trying to write to a constant variable. defining sum with let instead of const solve the problem.
