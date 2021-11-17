@@ -1,0 +1,32 @@
+*** Block 1 ***
+
+var a is hoisted and will log undefined as it is assigned a value only after the log.
+foo() will return 2 as the entire function is hoisted an dnot just a placeholder.
+
+
+*** Block 2 ***
+
+First log will return 'Aurelio De Rosa' as this.fullName refers to the assignmet to fullName inside the 'prop' object.
+The second log will return undefined as test(), although pointing to obj.prop.getFullName, is not part of obj and thus this.fullName cannot know which fullName to return.
+
+
+*** Block 3 ***
+
+First log will show undefined as a is not in the scope of that console.log.
+Second log will show number (b = 0) since when a variable is defined with one of the reserved words: var / let / const, it receive a global scope and can be used throughout the file.
+
+
+*** Block 4 ***
+
+Both logs will show 2 as functions are hoisted and because func is declered twice, the second time will be the one that counts.
+
+
+*** Block 5 ***
+
+First log will show 1 same as in block 3.
+Second log will cause a fault since var variables has global scope only when declered within file scope, otherwise, they have function scope (but not block scope). To fix the fault, the function funcD2 needs to return e and the log must be on the function.
+
+
+*** Block 6 ***
+
+First log in the file scope will show undefined while the log in funcE will show 1. That is because variables declered with var are hoisted as undefined until the line where they are assigned with a value. In this case, the outside log is before var f = 1 while funcE is after.
