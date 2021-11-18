@@ -5,7 +5,7 @@ b last assignmet is 5. The functions doesn't use their parameters so the argumen
 
 *** Block 2 ***
 
-var a same as before. function a() {} is after return so it is ignored.
+var a declered as global. Inside function b, the local function a is hoisted to the top scope of b and than the local variable a is assigned 10. Global variable a is not changed by the local happenings in b.
 
 
 *** Block 3 ***
