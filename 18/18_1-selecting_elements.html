@@ -20,11 +20,27 @@ initial-scale=1.0" />
 <input type="text" />
 </body>
 <script>
-//1.1
-const allEls = document.body.children;
-console.log(allEls);
-for(element of allEls) {
-	console.log(element);
-};
+// .1
+// const allElsNoQuery = document.body.children;
+// console.log(allEls);
+// for(element of allElsNoQuery) {
+// 	console.log(element);
+// };
+
+
+// .2
+// const allElsWithQuary = document.querySelectorAll('body *');
+// console.log(allElsWithQuary);
+
+
+// .3
+// 3.1
+const allElsWithQuary = document.querySelectorAll('input');
+console.log(allElsWithQuary);
+//document.querySelectorAll returns a nodeList: a lite, array like, object that has a built in forEach method
+allElsWithQuary.forEach((elm) => {
+	console.log(elm);
+});
+
 </script>
 </html>
