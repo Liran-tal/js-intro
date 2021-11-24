@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		.form-wrapper{
+			margin: 30px;
+		}
+		.form-wrapper input{
+			padding: 5px;
+			text-align: center;
+			margin-right: 3px;
+		}
+	</style>
+	<title>DOM - Smiley</title>
+</head>
+<body>
+	<div class="form-wrapper">
+		<input type="number" min="0" max="500" placeholder="number of smilies">
+		<input type="button" value="Smile Me!">
+	</div>
+	<div class="smiles-area">
+		test smiles-area
+	</div>
+</body>
+<script>
+	console.log("hello from smily");
+	let input = 0;
+	// console.log(input);
+	const btn = document.querySelector(".form-wrapper input[type=button]");
+	// console.log(btn);
+	let smilies = document.querySelector(".smiles-area");
+	btn.addEventListener("click", (input) => {
+		smilies.innerText = "";
+		input = Number(document.querySelector(".form-wrapper input[type=number]").value);
+		for (let i = 0; i < input; ++i){
+			smilies.innerText += ' :) ';
+		}
+	});
+
+</script>
+</html>
