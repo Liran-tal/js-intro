@@ -39,5 +39,24 @@
 	let  textnode = document.createTextNode("sub title 4");
 	subtitle4.appendChild(textnode);
 	ul_in_ul.appendChild(subtitle4);
+
+
+	//.3
+	const ul = document.querySelector('ul');
+	console.log(ul);
+	// const last_li = ul.lastElementChild;
+	const last_li = ul.lastChild;
+	console.log(last_li);
+	ul.removeChild(last_li);
+
+
+	//.4
+	start_here.parentNode.parentNode.previousElementSibling.lastElementChild.previousElementSibling.innerText = "Master of the DOM"
+	console.log(start_here.parentNode.parentNode.previousElementSibling.lastElementChild.previousElementSibling);
+
+
+	//.5
+	start_here.parentNode.nextElementSibling.firstElementChild.innerHTML = "<div class='my-class'>Noot Noot</div>"
+	console.log(start_here.parentNode.nextElementSibling.firstElementChild);
 </script>
 </html>
