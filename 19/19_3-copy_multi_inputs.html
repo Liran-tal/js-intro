@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		body{
+			text-align: center;
+		}
+
+		.input-box{
+			margin: auto;
+			width: fit-content;
+			border: 3px solid black;
+			border-radius: 8px;
+			padding: 10px;
+		}
+
+		.input-field input{
+			width: 16px;
+			margin-top: 16px;
+			text-align: center;
+		}
+
+		.input-field input:invalid{
+			border-color: rgb(255, 0, 0);
+		}
+
+		.input-box input[type="button"] {
+			margin-top: 16px;
+			border: 2px solid black;
+			border-radius: 8px;
+		}
+	</style>
+	<title>Document</title>
+</head>
+<body>
+	<h2>Your Verification Code</h2>
+	<h1></h1>
+	<br>
+	<div class='input-box'>
+		<div>
+			Enter your code here:
+		</div>
+		<div class="input-field">
+			<input type="text" maxlength="1" pattern="[0-9]">
+			<input type="text" maxlength="1" pattern="[0-9]">
+			<input type="text" maxlength="1" pattern="[0-9]">
+			<input type="text" maxlength="1" pattern="[0-9]">
+			<input type="text" maxlength="1" pattern="[0-9]">
+			<input type="text" maxlength="1" pattern="[0-9]">
+		</div>
+		<input type="button" value="Verify">
+	</div>	
+	<script src="19_3-copy_multi_inputs.js"></script>
+</body>
+</html>
