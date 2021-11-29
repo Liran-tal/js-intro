@@ -1,32 +1,33 @@
 "use strict";
+
+const FONT_SIZE_INTERVAL = 2;
+const UPPER_LIMIT_PX = 60;
+const LOWER_LIMIT_PX = 6;
 const increase_button = document.querySelector('.increase-btn');
 const decrease_button = document.querySelector('.decrease-btn');
+const example_text = document.querySelector('.example-text');
+
+function getFontSize(element) {
+	return(
+		window.getComputedStyle(element).getPropertyValue('font-size')
+	);
+}
 
 increase_button.addEventListener('click', () => {
-	const example_text = document.querySelector('.example-text');
-	let font_size = 
-		window.getComputedStyle(example_text)
-		.getPropertyValue('font-size')
-		.match(/\d*\.?\d*/)[0];
+	let font_size = parseFloat(getFontSize(example_text));
 	
-	font_size = parseFloat(font_size);
-	if (font_size < 59) {
-		font_size += 2;
+	if (font_size < UPPER_LIMIT_PX - FONT_SIZE_INTERVAL + 1) {
+		font_size += FONT_SIZE_INTERVAL;
 	}
 	
 	example_text.style.fontSize = font_size + 'px';
 })
 
 decrease_button.addEventListener('click', () => {
-	const example_text = document.querySelector('.example-text');
-	let font_size = 
-		window.getComputedStyle(example_text)
-		.getPropertyValue('font-size')
-		.match(/\d*\.?\d*/)[0];
+	let font_size = parseFloat(getFontSize(example_text));
 	
-	font_size = parseFloat(font_size);
-	if (font_size > 7) {
-		font_size -= 2;
+	if (font_size > LOWER_LIMIT_PX + FONT_SIZE_INTERVAL - 1) {
+		font_size -= FONT_SIZE_INTERVAL;
 	}
 	
 	example_text.style.fontSize = font_size + 'px';
