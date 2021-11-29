@@ -5,8 +5,19 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<style>
+		.input-container{
+			padding: 6px;
+			margin: auto;
+			text-align: center;
+		}
 		.output-container{
-			
+			margin: auto 10px;
+			width: 50vw;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: flex-start;
+			font-size: 20px;
 		}
 	</style>
 	<title>Document</title>
@@ -16,10 +27,12 @@
 		<p>
 			How many smileys do you want to see?
 		</p>
-		<input type="text">
+		<input type="number" min="0" max="100">
 		<input type="button" value="submit">
 	</div>
 	<div class="output-container">
 	</div>
+
+	<script src="22_5-smily.js"></script>
 </body>
 </html>
