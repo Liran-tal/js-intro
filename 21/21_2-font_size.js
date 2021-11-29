@@ -1,8 +1,6 @@
 "use strict";
 const increase_button = document.querySelector('.increase-btn');
-console.log(increase_button);
 const decrease_button = document.querySelector('.decrease-btn');
-console.log(decrease_button);
 
 increase_button.addEventListener('click', () => {
 	const example_text = document.querySelector('.example-text');
