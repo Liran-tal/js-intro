@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		body{
+			text-align: center;
+		}
+
+		.input-box{
+			margin: auto;
+			width: fit-content;
+			border: 3px solid black;
+			border-radius: 8px;
+			padding: 10px;
+		}
+
+		.input-field input{			
+			margin: 8px;
+			text-align: center;
+		}
+
+		.input-field input:invalid{
+			border-color: rgb(255, 0, 0);
+		}
+
+		.input-box input[type="button"] {
+			border: 2px solid black;
+			border-radius: 8px;
+		}
+	</style>
+	<title>Document</title>
+</head>
+<body>
+	<h1>Find Out Now! Can You Drink?!?</h1>
+	<p></p>
+	<form class='input-box'>
+		<p>
+			Enter your <strong>age</strong> here:
+		</p>
+		<div class="input-field">
+			<input type="number" min="0" max="99" >
+			<input type="button" value="Check">
+		</div>
+	</form>	
+	<script src="21_1-age.js"></script>
+</body>
+</html>
