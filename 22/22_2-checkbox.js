@@ -14,5 +14,4 @@ checkbox.addEventListener("change", () => {
 	}else {
 		checkbox_label.innerText = "Check to make an image appear";
 	}
-	
 })
