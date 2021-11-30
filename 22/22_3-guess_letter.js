@@ -11,8 +11,6 @@ const display_guessed_letters = document.querySelector('.guessed-Letters');
 const new_game_container = document.querySelector('.new-game-container');
 const restart_button = document.querySelector('.restart-button');
 
-console.log(letter_to_guess);
-
 function generateRandomLetter(){
 	const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 	return chars.charAt(Math.floor(Math.random() * chars.length));
