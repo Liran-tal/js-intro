@@ -15,5 +15,10 @@ form.addEventListener('submit', (event) => {
 			input_str += `${input_name}: ${input.value}\n`
 		}
 	});
-	const do_stuff = confirm(input_str);
+	if (confirm(input_str)) {
+		alert('congratulations you successfully sent this form');
+	}
+	else {
+		alert('Please change the needed fields and submit again');
+	}
 })
