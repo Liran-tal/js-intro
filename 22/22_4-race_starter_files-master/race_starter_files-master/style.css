@@ -55,6 +55,7 @@ td:last-child.active {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  -webkit-text-stroke: 1px black;
 }
 
 .win-popup-text{
@@ -69,6 +70,7 @@ td:last-child.active {
   border: 3px solid black;
   border-radius: 15px;
   background-color: seashell;
+  cursor: pointer;
 }
 
 .hide{
