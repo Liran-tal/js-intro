@@ -1,3 +1,7 @@
+*{
+  padding: 0;
+  margin: 0;
+}
 .racer_table {
   margin: auto;
 }
@@ -40,6 +44,33 @@ td:last-child.active {
   background-image: url(images/player_2.png), url("images/finish.png");
 }
 
+.win-popup{
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(50, 50, 50, 85%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.win-popup-text{
+  font-size: 60px;
+  margin-bottom: 40px;
+}
+
 .restart-btn{
-  padding: 5px;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  border: 3px solid black;
+  border-radius: 15px;
+  background-color: seashell;
+}
+
+.hide{
+  display: none;
 }
