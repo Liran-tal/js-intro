@@ -1,0 +1,7 @@
+.1
+
+In function invocation 'this' refers to the global variable. When working with a browser, the global variable is the browser window. In other words, let window.console.log(this), 'this' refers to window.
+
+
+.2
+
