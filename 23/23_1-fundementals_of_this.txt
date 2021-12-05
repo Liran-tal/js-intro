@@ -1,7 +1,44 @@
 .1
 
-In function invocation 'this' refers to the global variable. When working with a browser, the global variable is the browser window. In other words, let window.console.log(this), 'this' refers to window.
+In function invocation 'this' refers to the global variable. When working with a browser, the global variable is the browser window. In other words, let window.console.log(this), 'this' is undefined.
 
 
 .2
 
+const myObj = {
+	name: "Timmy",
+	greet: () => {
+		console.log(`Hello ${this.name}`);
+	},
+}; 
+myObj.greet();
+
+When calling on a method this can refer to different things depending on the context: 'this' in methods defined with 'function' will refer to the calling object. Arrow function has no 'this' of their own, so it will be undefined. 
+
+
+.3
+
+const myFuncDec = function () {
+	console.log(this);
+};
+
+myFuncDec is a regular function thus "this" will refer to Window.
+
+
+4.
+
+const myFuncArrow = () => {
+	console.log(this);
+}; 
+myFuncArrow();
+
+Arrow functions in the global scope. 'this' refers to Window.
+
+
+5.
+
+document.querySelector(".element").addEventListener(() => {
+console.log(this);
+});
+
+method call , so arrow functions will be undefined. Defining with "function" can solve the problem.
