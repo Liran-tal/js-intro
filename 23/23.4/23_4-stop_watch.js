@@ -40,7 +40,7 @@ const timer = {
 		this.sec = 0;
 		this.min = 0;
 		this.time_string = '00 : 00 : 00';
-		this.record.innerContent = '';
+		this.record.textContent = '';
 		this.time.innerText = this.time_string;
 	}
 	
