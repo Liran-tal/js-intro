@@ -13,12 +13,16 @@
 			printName: function () {
 				console.log(this.name);
 			},
-			printNameInterval: function () {
+			printNameDelayed: function () {
 				setTimeout(this.printName.bind(this), 1000);
 			}
 		}
+		const obj2 = {
+			name: bb
+		}
 
-		obj.printNameInterval();
+		b = obj.printName.bind(obj2);
+		obj.printNameDelayed.call(b);
 	</script>
 </body>
 </html>
